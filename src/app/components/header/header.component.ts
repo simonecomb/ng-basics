@@ -18,10 +18,27 @@ export class HeaderComponent {
   prodotto?: Prodotto; //? permette di assumere due valori Prodotto o Undefined
   
   bici?: Prodotto = {
-    id: 1,
     nome: "Bicicletta",
     prezzo: 120,
-    inOfferta: false
+    desc: "Test",
+    foto: ""
   };
+  
+  esempio() {
+    this.prodotto = {
+      desc: "Test",
+      foto: "",
+      nome: "Bicicletta",
+      prezzo: 120,
+    };
+    let eta = 16;
+    let patentato = false;
+    if (eta >= 18) {
+      patentato = true;
+    } else {
+      patentato = false;
+    }
+    patentato = eta >= 18 ? true : false; // operatore ternario
+  }
 };
 
